@@ -219,16 +219,19 @@ body {
 
 @media(max-width:900px){
 
-.hero h1{
-    font-size:48px;
-}
+    .hero h1{
+        font-size:48px;
+    }
 
-.navigation{
-    display:none;
-}
+    .navigation{
+        display:none;
+    }
 
-.section h2{
-    font-size:36px;
-}
+    .section h2{
+        font-size:36px;
+    }
 
+    .logo img{
+        width:145px;
+    }
 }
