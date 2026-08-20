@@ -413,7 +413,13 @@ a {
     padding-bottom: 105px;
 }
 
+.portfolio-heading {
+    margin-bottom: 45px;
+}
 
+.portfolio-heading .section-label {
+    margin-bottom: 0;
+}
 /* Smaller portfolio heading */
 
 .portfolio .section-heading {
