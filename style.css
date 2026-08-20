@@ -1,10 +1,4 @@
 /* =========================================================
-   IRGIBAEV GRAPHICS INSTALLATION
-   DARK INDUSTRIAL / PREMIUM
-========================================================= */
-
-
-/* =========================================================
    RESET
 ========================================================= */
 
@@ -21,13 +15,9 @@ html {
 
 
 body {
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 
-    background: #17191a;
-
+    background: #151718;
     color: #f4f2ed;
 
     line-height: 1.6;
@@ -47,12 +37,6 @@ a {
 }
 
 
-::selection {
-    background: #b9161c;
-    color: white;
-}
-
-
 
 /* =========================================================
    HERO
@@ -61,73 +45,38 @@ a {
 .hero {
     position: relative;
 
-    width: calc(100% - 64px);
+    width: calc(100% - 60px);
     max-width: 1500px;
 
-    min-height: calc(100vh - 70px);
+    min-height: calc(100vh - 60px);
 
-    margin:
-        35px
-        auto;
+    margin: 30px auto;
 
-    padding:
-        150px
-        60px
-        90px;
+    padding: 150px 60px 90px;
 
     display: flex;
-
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
     overflow: hidden;
 
-    border:
-        1px solid
-        rgba(255, 255, 255, 0.12);
+    border-radius: 55px;
 
-    border-radius: 58px;
+    border: 1px solid rgba(255,255,255,.1);
 
     background:
         linear-gradient(
-            rgba(0, 0, 0, 0.22),
-            rgba(0, 0, 0, 0.32)
+            rgba(0,0,0,.22),
+            rgba(0,0,0,.35)
         ),
         url("hero-bg.jpg");
 
     background-size: cover;
-
     background-position: center;
 
     box-shadow:
-        0 35px 90px
-        rgba(0, 0, 0, 0.35);
-}
-
-
-
-/* subtle dark vignette */
-
-.hero::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    border-radius: inherit;
-
-    background:
-        radial-gradient(
-            circle at center,
-            transparent 25%,
-            rgba(0, 0, 0, 0.12) 65%,
-            rgba(0, 0, 0, 0.35) 100%
-        );
-
-    pointer-events: none;
-
-    z-index: 0;
+        0 30px 80px
+        rgba(0,0,0,.35);
 }
 
 
@@ -146,7 +95,7 @@ a {
 
     width: calc(100% - 220px);
 
-    z-index: 10;
+    z-index: 20;
 }
 
 
@@ -158,30 +107,20 @@ a {
 .navigation {
     width: 100%;
 
-    min-height: 58px;
-
     display: grid;
 
     grid-template-columns:
         repeat(5, 1fr);
 
-    align-items: center;
-
     overflow: hidden;
-
-    background:
-        rgba(248, 247, 243, 0.96);
 
     border-radius: 100px;
 
+    background: rgba(248,247,243,.96);
+
     box-shadow:
-        0 12px 38px
-        rgba(0, 0, 0, 0.20);
-
-    backdrop-filter: blur(18px);
-
-    -webkit-backdrop-filter:
-        blur(18px);
+        0 10px 35px
+        rgba(0,0,0,.18);
 }
 
 
@@ -189,19 +128,14 @@ a {
     height: 58px;
 
     display: flex;
-
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
     color: #161616;
 
-    font-size: 14px;
-
-    font-weight: 500;
-
     text-decoration: none;
 
-    text-align: center;
+    font-size: 14px;
 
     transition:
         color .25s ease,
@@ -213,13 +147,13 @@ a {
     color: #b9161c;
 
     background:
-        rgba(185, 22, 28, 0.04);
+        rgba(185,22,28,.04);
 }
 
 
 
 /* =========================================================
-   HERO CENTER CONTENT
+   HERO CONTENT
 ========================================================= */
 
 .hero-content {
@@ -227,35 +161,22 @@ a {
 
     z-index: 5;
 
-    width: 100%;
-
     display: flex;
-
     flex-direction: column;
 
     align-items: center;
-    justify-content: center;
 
     text-align: center;
 }
 
 
-
-/* =========================================================
-   HERO LOGO
-========================================================= */
-
 .hero-logo {
-    width: 195px;
-    height: 195px;
+    width: 190px;
+    height: 190px;
 
     object-fit: contain;
 
-    margin-bottom: 34px;
-
-    /*
-       Black transparent logo becomes white.
-    */
+    margin-bottom: 30px;
 
     filter:
         brightness(0)
@@ -263,190 +184,121 @@ a {
 }
 
 
-
-/* =========================================================
-   HERO COMPANY NAME
-========================================================= */
-
 .hero h1 {
-    color: #f6f4ef;
+    color: #f5f3ee;
 
     font-size:
-        clamp(
-            42px,
-            5vw,
-            72px
-        );
+        clamp(42px, 5vw, 72px);
 
     font-weight: 500;
 
     line-height: 1;
 
-    letter-spacing: 14px;
+    letter-spacing: 13px;
 
-    margin-left: 14px;
+    margin-left: 13px;
 }
 
-
-
-/* GRAPHICS INSTALLATION */
 
 .hero-subtitle {
-    margin-top: 22px;
+    margin-top: 20px;
 
     color:
-        rgba(
-            246,
-            244,
-            239,
-            0.76
-        );
+        rgba(255,255,255,.68);
 
-    font-size: 14px;
+    font-size: 13px;
 
-    font-weight: 400;
+    letter-spacing: 8px;
 
-    letter-spacing: 9px;
-
-    margin-left: 9px;
+    margin-left: 8px;
 }
 
 
-
-/* =========================================================
-   HERO CONTACT BUTTON
-========================================================= */
-
 .hero-button {
-    min-width: 265px;
+    margin-top: 45px;
 
-    min-height: 70px;
+    min-width: 225px;
+    min-height: 60px;
 
-    margin-top: 54px;
-
-    padding:
-        18px
-        44px;
+    padding: 15px 35px;
 
     display: inline-flex;
-
     align-items: center;
     justify-content: center;
 
-    background:
-        linear-gradient(
-            180deg,
-            #c91c22,
-            #ae1117
-        );
+    border-radius: 100px;
+
+    background: #b9161c;
 
     color: #ffffff;
 
-    border-radius: 100px;
-
     text-decoration: none;
 
-    font-size: 19px;
-
-    font-weight: 500;
-
-    box-shadow:
-        0 15px 35px
-        rgba(180, 17, 23, 0.27);
+    font-size: 16px;
 
     transition:
         transform .25s ease,
-        box-shadow .25s ease,
         background .25s ease;
 }
 
 
 .hero-button:hover {
-    transform:
-        translateY(-3px);
+    transform: translateY(-3px);
 
-    background:
-        linear-gradient(
-            180deg,
-            #df242a,
-            #bd1319
-        );
-
-    box-shadow:
-        0 20px 40px
-        rgba(180, 17, 23, 0.36);
+    background: #d51d24;
 }
 
-
-
-/* =========================================================
-   HERO LOCATION
-========================================================= */
 
 .hero-location {
     position: absolute;
 
+    bottom: 45px;
     left: 50%;
-    bottom: 52px;
 
-    transform:
-        translateX(-50%);
+    transform: translateX(-50%);
 
     z-index: 5;
 
     width: 100%;
 
+    text-align: center;
+
     color:
-        rgba(
-            255,
-            255,
-            255,
-            0.55
-        );
+        rgba(255,255,255,.48);
 
-    font-size: 11px;
-
-    font-weight: 400;
+    font-size: 10px;
 
     letter-spacing: 4px;
-
-    text-align: center;
 }
 
 
 .hero-location span {
-    margin:
-        0
-        13px;
+    margin: 0 12px;
 }
 
 
 
 /* =========================================================
-   GENERAL SECTIONS
+   SECTIONS
 ========================================================= */
 
 .section {
-    padding:
-        130px
-        7%;
+    padding: 120px 7%;
 }
 
 
 .section-heading {
-    width: 100%;
-
     max-width: 850px;
 
-    margin:
-        0 auto
-        65px;
+    margin: 0 auto 60px;
 
     text-align: center;
 }
 
 
 .section-label {
+    margin-bottom: 17px;
+
     color: #c41b21;
 
     font-size: 11px;
@@ -454,37 +306,27 @@ a {
     font-weight: 600;
 
     letter-spacing: 3px;
-
-    margin-bottom: 18px;
 }
 
 
 .section-heading h2 {
-    color: #f2f0eb;
+    color: #f3f1ec;
 
     font-size:
-        clamp(
-            42px,
-            5vw,
-            68px
-        );
+        clamp(42px, 5vw, 67px);
 
     font-weight: 400;
 
     line-height: 1.05;
-
-    letter-spacing: -2px;
 }
 
 
 .section-description {
     max-width: 700px;
 
-    margin:
-        26px auto
-        0;
+    margin: 25px auto 0;
 
-    color: #909090;
+    color: #8a8a8a;
 
     font-size: 16px;
 
@@ -503,9 +345,7 @@ a {
 
 
 .about-grid {
-    width: 100%;
-
-    max-width: 1250px;
+    max-width: 1200px;
 
     margin: auto;
 
@@ -519,9 +359,9 @@ a {
 
 
 .about-card {
-    min-height: 315px;
+    min-height: 300px;
 
-    padding: 36px;
+    padding: 35px;
 
     display: flex;
 
@@ -529,65 +369,37 @@ a {
 
     justify-content: flex-end;
 
+    border-radius: 28px;
+
     background: #1a1b1c;
 
     border:
-        1px solid
-        #2b2c2d;
-
-    border-radius: 28px;
-
-    transition:
-        transform .3s ease,
-        border-color .3s ease,
-        background .3s ease;
+        1px solid #292a2b;
 }
 
 
-.about-card:hover {
-    transform:
-        translateY(-6px);
-
-    border-color:
-        rgba(
-            196,
-            27,
-            33,
-            0.45
-        );
-
-    background: #1d1e1f;
-}
-
-
-.about-number {
+.about-card > span {
     margin-bottom: auto;
 
     color: #c41b21;
 
-    font-size: 12px;
-
-    letter-spacing: 2px;
+    font-size: 11px;
 }
 
 
 .about-card h3 {
-    color: #ffffff;
+    margin-bottom: 12px;
 
-    font-size: 23px;
+    font-size: 22px;
 
     font-weight: 500;
-
-    margin-bottom: 14px;
 }
 
 
 .about-card p {
-    color: #898989;
+    color: #858585;
 
     font-size: 14px;
-
-    line-height: 1.7;
 }
 
 
@@ -597,12 +409,12 @@ a {
 ========================================================= */
 
 .services {
-    background: #0c0d0e;
+    background: #0d0e0f;
 }
 
 
 .services-grid {
-    max-width: 1250px;
+    max-width: 1200px;
 
     margin: auto;
 
@@ -612,35 +424,23 @@ a {
         repeat(3, 1fr);
 
     border-top:
-        1px solid
-        #292a2b;
+        1px solid #292a2b;
 
     border-left:
-        1px solid
-        #292a2b;
+        1px solid #292a2b;
 }
 
 
 .service {
-    min-height: 245px;
+    min-height: 230px;
 
-    padding: 35px;
+    padding: 32px;
 
     border-right:
-        1px solid
-        #292a2b;
+        1px solid #292a2b;
 
     border-bottom:
-        1px solid
-        #292a2b;
-
-    transition:
-        background .3s ease;
-}
-
-
-.service:hover {
-    background: #151617;
+        1px solid #292a2b;
 }
 
 
@@ -648,30 +448,26 @@ a {
     color: #c41b21;
 
     font-size: 11px;
-
-    letter-spacing: 2px;
 }
 
 
 .service h3 {
-    margin-top: 55px;
+    margin-top: 50px;
 
-    color: #f1efea;
+    color: #ffffff;
 
-    font-size: 23px;
+    font-size: 22px;
 
     font-weight: 500;
 }
 
 
 .service p {
-    margin-top: 13px;
+    margin-top: 12px;
 
-    color: #7f7f7f;
+    color: #808080;
 
     font-size: 14px;
-
-    line-height: 1.65;
 }
 
 
@@ -680,196 +476,193 @@ a {
    PORTFOLIO
 ========================================================= */
 
-/* =========================================================
-   PORTFOLIO CAROUSEL
-========================================================= */
-
 .portfolio {
     background: #111213;
+
     overflow: hidden;
 }
 
-.portfolio-carousel {
+
+
+/* SLIDER CONTAINER */
+
+.portfolio-slider {
     position: relative;
 
     width: 100%;
     max-width: 1400px;
 
-    margin: 0 auto;
+    margin: auto;
 
     display: flex;
     align-items: center;
 
-    gap: 22px;
+    gap: 20px;
 }
 
-.carousel-viewport {
+
+
+/* WINDOW */
+
+.portfolio-viewport {
     width: 100%;
-    overflow: hidden;
 
-    border-radius: 32px;
+    overflow: hidden;
 }
 
-.carousel-track {
+
+
+/* MOVING TRACK */
+
+.portfolio-track {
     display: flex;
 
+    gap: 18px;
+
     transition:
-        transform 0.65s
-        cubic-bezier(.22, .61, .36, 1);
+        transform .65s
+        cubic-bezier(.22,.61,.36,1);
 
     will-change: transform;
 }
 
-.carousel-slide {
-    min-width: 100%;
 
-    height: 650px;
+
+/* PHOTO */
+
+.portfolio-slide {
+    flex:
+        0 0
+        calc((100% - 36px) / 3);
+
+    height: 360px;
 
     overflow: hidden;
 
-    border-radius: 32px;
+    border-radius: 26px;
 
-    background: #1b1c1d;
+    background: #18191a;
+
+    border:
+        1px solid
+        rgba(255,255,255,.07);
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease;
 }
 
-.carousel-slide img {
+
+.portfolio-slide:hover {
+    transform: translateY(-5px);
+
+    border-color:
+        rgba(196,27,33,.45);
+}
+
+
+.portfolio-slide img {
     width: 100%;
     height: 100%;
 
-    display: block;
-
-    object-fit: contain;
-
-    background: #0d0e0f;
+    object-fit: cover;
 }
 
 
-/* ---------- ARROWS ---------- */
 
-.carousel-arrow {
+/* =========================================================
+   PORTFOLIO ARROWS
+========================================================= */
+
+.portfolio-arrow {
     flex-shrink: 0;
 
-    width: 58px;
-    height: 58px;
+    width: 54px;
+    height: 54px;
 
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
-    border: none;
     border-radius: 50%;
 
-    background: #f4f2ed;
-    color: #161616;
+    border:
+        1px solid
+        rgba(255,255,255,.18);
 
-    font-size: 22px;
+    background:
+        rgba(18,19,20,.95);
+
+    color: #f4f2ed;
+
+    font-size: 20px;
 
     cursor: pointer;
 
     transition:
-        transform 0.25s ease,
-        background 0.25s ease,
-        color 0.25s ease;
+        transform .25s ease,
+        background .25s ease,
+        border-color .25s ease;
 }
 
-.carousel-arrow:hover {
+
+.portfolio-arrow:hover {
     background: #b9161c;
-    color: #ffffff;
 
-    transform: scale(1.07);
+    border-color: #b9161c;
+
+    transform: scale(1.08);
 }
 
 
-/* ---------- COUNTER ---------- */
 
-.carousel-counter {
+/* =========================================================
+   PORTFOLIO NUMBER
+========================================================= */
+
+.portfolio-progress {
     margin-top: 28px;
 
     display: flex;
+
     justify-content: center;
     align-items: center;
 
     gap: 14px;
 
-    color: #777777;
+    color: #666;
 
     font-size: 10px;
 
     letter-spacing: 2px;
 }
 
-#currentSlide {
+
+#portfolioCurrent {
     color: #c41b21;
 }
 
-.counter-line {
-    width: 50px;
+
+.progress-line {
+    width: 55px;
     height: 1px;
 
-    background: #3b3b3b;
+    background: #3a3a3a;
 }
 
 
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 700px) {
-
-    .portfolio-carousel {
-        gap: 0;
-    }
-
-    .carousel-viewport {
-        border-radius: 24px;
-    }
-
-    .carousel-slide {
-        height: 480px;
-
-        border-radius: 24px;
-    }
-
-    .carousel-arrow {
-        position: absolute;
-
-        z-index: 10;
-
-        width: 44px;
-        height: 44px;
-
-        background: rgba(245, 243, 238, 0.94);
-
-        font-size: 18px;
-    }
-
-    .carousel-prev {
-        left: 12px;
-    }
-
-    .carousel-next {
-        right: 12px;
-    }
-}
-
-@media (max-width: 430px) {
-
-    .carousel-slide {
-        height: 410px;
-    }
-}
 
 /* =========================================================
    CERTIFICATIONS
 ========================================================= */
 
 .certifications {
-    background: #0c0d0e;
+    background: #0d0e0f;
 }
 
 
 .certification-grid {
-    max-width: 950px;
+    max-width: 900px;
 
     margin: auto;
 
@@ -883,7 +676,7 @@ a {
 
 
 .certification-card {
-    min-height: 300px;
+    min-height: 280px;
 
     padding: 38px;
 
@@ -893,40 +686,31 @@ a {
 
     justify-content: space-between;
 
-    background: #161718;
+    border-radius: 28px;
+
+    background: #171819;
 
     border:
-        1px solid
-        #292a2b;
-
-    border-radius: 28px;
+        1px solid #292a2b;
 }
 
 
-.cert-logo {
+.certification-card strong {
     color: #c41b21;
 
     font-size: 25px;
-
-    font-weight: 700;
 }
 
 
 .certification-card h3 {
-    color: #ffffff;
-
-    font-size: 25px;
+    font-size: 24px;
 
     font-weight: 500;
 }
 
 
 .certification-card p {
-    color: #838383;
-
-    font-size: 14px;
-
-    margin-top: 6px;
+    color: #808080;
 }
 
 
@@ -936,34 +720,25 @@ a {
 ========================================================= */
 
 .contact-section {
-    width:
-        calc(
-            100% - 64px
-        );
+    width: calc(100% - 60px);
 
     max-width: 1500px;
 
-    margin:
-        35px
-        auto;
+    margin: 30px auto;
 
-    padding:
-        125px
-        40px;
+    padding: 115px 40px;
 
-    background:
-        #1b1c1d;
+    border-radius: 50px;
+
+    background: #1a1b1c;
 
     border:
-        1px solid
-        #2b2c2d;
-
-    border-radius: 55px;
+        1px solid #292a2b;
 }
 
 
 .contact-content {
-    max-width: 780px;
+    max-width: 800px;
 
     margin: auto;
 
@@ -972,74 +747,44 @@ a {
 
 
 .contact-content h2 {
-    color: #f4f2ed;
+    margin-bottom: 25px;
 
     font-size:
-        clamp(
-            46px,
-            6vw,
-            76px
-        );
-
-    line-height: 1;
+        clamp(45px, 6vw, 75px);
 
     font-weight: 400;
 
-    margin-bottom: 25px;
+    line-height: 1;
 }
 
 
 .contact-content > p:not(.section-label) {
     max-width: 600px;
 
-    margin:
-        0 auto
-        35px;
+    margin: 0 auto 32px;
 
     color: #898989;
-
-    font-size: 15px;
-
-    line-height: 1.8;
 }
 
 
 .contact-button {
-    min-width: 210px;
+    min-width: 205px;
+    min-height: 56px;
 
-    min-height: 58px;
-
-    padding:
-        16px
-        34px;
+    padding: 15px 30px;
 
     display: inline-flex;
 
     align-items: center;
     justify-content: center;
 
-    background:
-        #b9161c;
-
-    color: #ffffff;
-
     border-radius: 100px;
 
+    background: #b9161c;
+
+    color: white;
+
     text-decoration: none;
-
-    font-weight: 600;
-
-    transition:
-        transform .25s ease,
-        background .25s ease;
-}
-
-
-.contact-button:hover {
-    transform:
-        translateY(-2px);
-
-    background: #d21d24;
 }
 
 
@@ -1049,10 +794,7 @@ a {
 ========================================================= */
 
 .footer {
-    padding:
-        70px
-        20px
-        45px;
+    padding: 65px 20px 40px;
 
     display: flex;
 
@@ -1064,10 +806,10 @@ a {
 }
 
 
-.footer-logo {
-    width: 65px;
+.footer img {
+    width: 60px;
 
-    margin-bottom: 16px;
+    margin-bottom: 15px;
 
     filter:
         brightness(0)
@@ -1076,18 +818,14 @@ a {
 
 
 .footer strong {
-    color: #ffffff;
-
-    font-size: 16px;
-
     letter-spacing: 4px;
 }
 
 
-.footer > span {
-    margin-top: 6px;
+.footer span {
+    margin-top: 5px;
 
-    color: #737373;
+    color: #777;
 
     font-size: 7px;
 
@@ -1096,20 +834,18 @@ a {
 
 
 .footer p {
-    margin-top: 25px;
+    margin-top: 22px;
 
-    color: #656565;
+    color: #666;
 
     font-size: 11px;
 }
 
 
 .footer small {
-    margin-top: 8px;
+    margin-top: 7px;
 
     color: #444;
-
-    font-size: 10px;
 }
 
 
@@ -1121,15 +857,11 @@ a {
 @media (max-width: 1000px) {
 
     .header {
-        width:
-            calc(
-                100% - 100px
-            );
+        width: calc(100% - 100px);
     }
 
 
-    .about-grid,
-    .portfolio-grid {
+    .about-grid {
         grid-template-columns:
             repeat(2, 1fr);
     }
@@ -1138,6 +870,15 @@ a {
     .services-grid {
         grid-template-columns:
             repeat(2, 1fr);
+    }
+
+
+    .portfolio-slide {
+        flex:
+            0 0
+            calc((100% - 18px) / 2);
+
+        height: 340px;
     }
 
 }
@@ -1151,159 +892,86 @@ a {
 @media (max-width: 700px) {
 
 
-    body {
-        background: #17191a;
-    }
-
-
-    /* HERO */
-
     .hero {
-        width:
-            calc(
-                100% - 14px
-            );
+        width: calc(100% - 14px);
 
         min-height:
-            calc(
-                100svh - 14px
-            );
+            calc(100svh - 14px);
 
-        margin:
-            7px auto;
+        margin: 7px auto;
 
-        padding:
-            115px
-            20px
-            90px;
+        padding: 110px 20px 80px;
 
-        border-radius: 30px;
+        border-radius: 28px;
     }
 
-
-
-    /* HEADER */
 
     .header {
         top: 18px;
 
-        width:
-            calc(
-                100% - 28px
-            );
-    }
-
-
-
-    /* MENU */
-
-    .navigation {
-        min-height: 46px;
-
-        grid-template-columns:
-            repeat(5, 1fr);
+        width: calc(100% - 28px);
     }
 
 
     .navigation a {
-        height: 46px;
-
-        padding:
-            0 2px;
+        height: 44px;
 
         font-size: 9px;
+
+        padding: 0 2px;
     }
 
-
-
-    /* HERO LOGO */
 
     .hero-logo {
-        width: 130px;
-        height: 130px;
-
-        margin-bottom: 24px;
+        width: 125px;
+        height: 125px;
     }
 
-
-
-    /* NAME */
 
     .hero h1 {
-        font-size: 31px;
+        font-size: 30px;
 
-        letter-spacing: 7px;
+        letter-spacing: 6px;
 
-        margin-left: 7px;
+        margin-left: 6px;
     }
-
 
 
     .hero-subtitle {
-        margin-top: 14px;
-
         font-size: 7px;
 
-        letter-spacing: 4px;
-
-        margin-left: 4px;
+        letter-spacing: 3px;
     }
 
 
-
-    /* HERO BUTTON */
-
     .hero-button {
         min-width: 180px;
+        min-height: 52px;
 
-        min-height: 53px;
-
-        margin-top: 35px;
-
-        padding:
-            14px
-            28px;
+        margin-top: 32px;
 
         font-size: 14px;
     }
 
 
-
-    /* LOCATION */
-
     .hero-location {
-        bottom: 25px;
+        bottom: 22px;
 
-        padding:
-            0 15px;
+        font-size: 6px;
 
-        font-size: 6.5px;
-
-        letter-spacing: 1.5px;
+        letter-spacing: 1.4px;
 
         white-space: nowrap;
     }
 
 
     .hero-location span {
-        margin:
-            0
-            5px;
+        margin: 0 5px;
     }
 
-
-
-    /* SECTIONS */
 
     .section {
-        padding:
-            90px
-            22px;
-    }
-
-
-    .section-heading {
-        margin-bottom: 45px;
+        padding: 85px 22px;
     }
 
 
@@ -1312,70 +980,68 @@ a {
     }
 
 
-    .section-description {
-        font-size: 14px;
-    }
-
-
-
-    /* ABOUT */
-
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-
-    /* SERVICES */
-
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    .service {
-        min-height: 210px;
-    }
-
-
-
-    /* PORTFOLIO */
-
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    .portfolio-card {
-        min-height: 420px;
-    }
-
-
-
-    /* CERTIFICATIONS */
-
+    .about-grid,
+    .services-grid,
     .certification-grid {
         grid-template-columns: 1fr;
     }
 
 
 
-    /* CONTACT */
+    /* PORTFOLIO */
+
+    .portfolio-slider {
+        gap: 0;
+    }
+
+
+    .portfolio-track {
+        gap: 14px;
+    }
+
+
+    .portfolio-slide {
+        flex: 0 0 84%;
+
+        height: 330px;
+
+        border-radius: 22px;
+    }
+
+
+    .portfolio-arrow {
+        position: absolute;
+
+        z-index: 20;
+
+        width: 46px;
+        height: 46px;
+
+        background:
+            rgba(15,16,17,.90);
+
+        backdrop-filter: blur(8px);
+    }
+
+
+    .portfolio-prev {
+        left: 8px;
+    }
+
+
+    .portfolio-next {
+        right: 8px;
+    }
+
 
     .contact-section {
-        width:
-            calc(
-                100% - 14px
-            );
+        width: calc(100% - 14px);
 
-        margin:
-            7px auto;
+        margin: 7px auto;
 
-        padding:
-            85px
-            22px;
+        padding: 80px 22px;
 
-        border-radius: 30px;
+        border-radius: 28px;
     }
 
 
@@ -1388,7 +1054,7 @@ a {
 
 
 /* =========================================================
-   VERY SMALL PHONES
+   SMALL PHONE
 ========================================================= */
 
 @media (max-width: 430px) {
@@ -1398,28 +1064,10 @@ a {
     }
 
 
-    .hero-logo {
-        width: 115px;
-        height: 115px;
-    }
+    .portfolio-slide {
+        flex: 0 0 86%;
 
-
-    .hero h1 {
-        font-size: 27px;
-
-        letter-spacing: 5px;
-    }
-
-
-    .hero-subtitle {
-        font-size: 6px;
-
-        letter-spacing: 3px;
-    }
-
-
-    .hero-location {
-        font-size: 5.7px;
+        height: 310px;
     }
 
 }
