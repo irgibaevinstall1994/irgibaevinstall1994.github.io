@@ -195,3 +195,85 @@ document.addEventListener("DOMContentLoaded", function () {
     updateSlider();
 
 });
+/* =========================================================
+   CERTIFICATE MODAL
+========================================================= */
+
+const certificateLinks =
+    document.querySelectorAll(".certificate-view");
+
+const certificateModal =
+    document.getElementById("certificateModal");
+
+const certificateModalImage =
+    document.getElementById("certificateModalImage");
+
+const certificateModalClose =
+    document.querySelector(".certificate-modal-close");
+
+const certificateModalBackdrop =
+    document.querySelector(".certificate-modal-backdrop");
+
+
+function openCertificate(imageSrc) {
+
+    certificateModalImage.src = imageSrc;
+
+    certificateModal.classList.add("is-open");
+
+    document.body.classList.add("modal-open");
+}
+
+
+function closeCertificate() {
+
+    certificateModal.classList.remove("is-open");
+
+    document.body.classList.remove("modal-open");
+
+    setTimeout(() => {
+        certificateModalImage.src = "";
+    }, 200);
+}
+
+
+certificateLinks.forEach((link) => {
+
+    link.addEventListener("click", function (event) {
+
+        event.preventDefault();
+
+        const imageSrc =
+            this.dataset.certificate;
+
+        openCertificate(imageSrc);
+
+    });
+
+});
+
+
+certificateModalClose.addEventListener(
+    "click",
+    closeCertificate
+);
+
+
+certificateModalBackdrop.addEventListener(
+    "click",
+    closeCertificate
+);
+
+
+/* Close with Escape */
+
+document.addEventListener("keydown", function (event) {
+
+    if (
+        event.key === "Escape" &&
+        certificateModal.classList.contains("is-open")
+    ) {
+        closeCertificate();
+    }
+
+});
