@@ -357,6 +357,9 @@
 
 </section>
 
+<!-- =====================================================
+     CERTIFICATIONS
+===================================================== -->
 
 <!-- =====================================================
      CERTIFICATIONS
@@ -410,14 +413,21 @@
             </div>
 
 
-            <a
-    href="certifications/fleet.png"
-    class="certificate-button certificate-view"
-    data-certificate="certifications/fleet.png"
->
-    <span>View Certificate</span>
-    <span class="certificate-arrow">↗</span>
-</a>
+            <button
+                type="button"
+                class="certificate-button certificate-view"
+                data-certificate="certifications/fleet.png"
+            >
+
+                <span>
+                    View Certificate
+                </span>
+
+                <span class="certificate-arrow">
+                    ↗
+                </span>
+
+            </button>
 
         </article>
 
@@ -453,14 +463,22 @@
             </div>
 
 
-           <a
-    href="certifications/walls.png"
-    class="certificate-button certificate-view"
-    data-certificate="certifications/walls.png"
->
-    <span>View Certificate</span>
-    <span class="certificate-arrow">↗</span>
-</a>
+            <button
+                type="button"
+                class="certificate-button certificate-view"
+                data-certificate="certifications/walls.png"
+            >
+
+                <span>
+                    View Certificate
+                </span>
+
+                <span class="certificate-arrow">
+                    ↗
+                </span>
+
+            </button>
+
         </article>
 
 
@@ -468,13 +486,27 @@
 
 </section>
 
-    <!-- CERTIFICATE MODAL -->
 
-<div class="certificate-modal" id="certificateModal">
+
+<!-- =====================================================
+     CERTIFICATE POPUP
+===================================================== -->
+
+<div
+    class="certificate-modal"
+    id="certificateModal"
+    aria-hidden="true"
+>
 
     <div class="certificate-modal-backdrop"></div>
 
-    <div class="certificate-modal-window">
+
+    <div
+        class="certificate-modal-window"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Certificate"
+    >
 
         <button
             class="certificate-modal-close"
@@ -484,16 +516,18 @@
             ×
         </button>
 
+
         <img
             id="certificateModalImage"
             src=""
-            alt="Certificate"
+            alt="3M Certificate"
         >
 
     </div>
 
-</div> 
+</div>
 
+    
 <!-- =====================================================
      FOOTER
 ===================================================== -->
