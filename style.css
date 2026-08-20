@@ -1072,6 +1072,168 @@ a {
 
 }
 
+/* =========================================================
+   CERTIFICATE MODAL
+========================================================= */
+
+.certificate-modal {
+    position: fixed;
+    inset: 0;
+
+    z-index: 9999;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+}
+
+.certificate-modal.is-open {
+    display: flex;
+}
+
+
+/* DARK BACKGROUND */
+
+.certificate-modal-backdrop {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.82);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+
+/* WINDOW */
+
+.certificate-modal-window {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1000px, 92vw);
+
+    max-height: 88vh;
+
+    padding: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #151617;
+
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 28px;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.55);
+}
+
+
+/* CERTIFICATE */
+
+.certificate-modal-window img {
+    display: block;
+
+    width: 100%;
+    max-height: calc(88vh - 36px);
+
+    object-fit: contain;
+
+    border-radius: 18px;
+}
+
+
+/* CLOSE BUTTON */
+
+.certificate-modal-close {
+    position: absolute;
+
+    top: -16px;
+    right: -16px;
+
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 50%;
+
+    background: #171819;
+
+    color: #ffffff;
+
+    font-size: 28px;
+    font-weight: 300;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.35);
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.certificate-modal-close:hover {
+    background: #b9161c;
+
+    transform: scale(1.06);
+}
+
+
+/* LOCK PAGE WHILE MODAL IS OPEN */
+
+body.modal-open {
+    overflow: hidden;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .certificate-modal {
+        padding: 15px;
+    }
+
+    .certificate-modal-window {
+        width: 100%;
+
+        padding: 10px;
+
+        border-radius: 20px;
+    }
+
+    .certificate-modal-window img {
+        max-height: 82vh;
+
+        border-radius: 14px;
+    }
+
+    .certificate-modal-close {
+        top: 8px;
+        right: 8px;
+
+        width: 40px;
+        height: 40px;
+
+        font-size: 24px;
+
+        background: rgba(15,16,17,0.92);
+    }
+}
 
 /* =========================================================
    FOOTER
