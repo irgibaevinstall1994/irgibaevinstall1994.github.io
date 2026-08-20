@@ -18,48 +18,125 @@
     <!-- =====================================================
          HEADER / NAVIGATION
          ===================================================== -->
+/* =========================================================
+   HEADER / TOP MENU
+   ========================================================= */
 
-    <header class="header">
+.header {
+    position: absolute;
 
-    <nav class="navigation">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    top: 28px;
+    left: 50%;
 
-</header>
+    transform: translateX(-50%);
+
+    width: calc(100% - 80px);
+    max-width: 1400px;
+
+    z-index: 1000;
+}
 
 
-<section class="hero" id="home">
+.navigation {
+    width: 100%;
 
-    <div class="hero-content">
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 
-        <img
-            src="logo.png"
-            alt="IRGIBAEV Graphics Installation"
-            class="hero-logo"
-        >
+    align-items: center;
 
-        <div class="hero-company">
-            IRGIBAEV
-        </div>
+    padding: 0;
 
-        <div class="hero-company-subtitle">
-            GRAPHICS INSTALLATION
-        </div>
+    background: rgba(255, 255, 255, 0.95);
 
-        <a
-            href="mailto:YOUR-EMAIL-HERE"
-            class="hero-contact-button"
-        >
-            Contact Us
-        </a>
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 100px;
 
-    </div>
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.05);
 
-</section>
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 
+    overflow: hidden;
+}
+
+
+.navigation a {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 17px 10px;
+
+    color: #202020;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    text-align: center;
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.navigation a:hover {
+    color: #b51f24;
+
+    background: rgba(181, 31, 36, 0.035);
+}
+
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .header {
+        top: 14px;
+
+        width: calc(100% - 20px);
+    }
+
+
+    .navigation {
+        width: 100%;
+
+        grid-template-columns: repeat(4, 1fr);
+
+        border-radius: 100px;
+    }
+
+
+    .navigation a {
+        padding: 13px 4px;
+
+        font-size: 11px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .header {
+        width: calc(100% - 14px);
+    }
+
+
+    .navigation a {
+        padding: 12px 2px;
+
+        font-size: 10px;
+    }
+
+}
 
 
     <!-- =====================================================
