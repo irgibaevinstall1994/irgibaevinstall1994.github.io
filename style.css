@@ -52,22 +52,23 @@ a {
    HEADER
    ========================================================= */
 
+/* =========================================================
+   HEADER / TOP MENU
+   ========================================================= */
+
 .header {
     position: absolute;
 
-    top: 32px;
+    top: 34px;
     left: 50%;
 
     transform: translateX(-50%);
 
-    width: min(82%, 1100px);
+    width: min(78%, 900px);
 
     z-index: 1000;
 }
 
-
-
-/* ---------- NAVIGATION ---------- */
 
 .navigation {
     width: 100%;
@@ -76,18 +77,15 @@ a {
     justify-content: space-around;
     align-items: center;
 
-    gap: 20px;
-
-    padding: 14px 30px;
+    padding: 15px 40px;
 
     background: rgba(255, 255, 255, 0.94);
 
-    border: 1px solid rgba(0, 0, 0, 0.06);
-
+    border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 100px;
 
     box-shadow:
-        0 8px 30px rgba(0, 0, 0, 0.06);
+        0 8px 30px rgba(0, 0, 0, 0.05);
 
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
@@ -97,9 +95,9 @@ a {
 .navigation a {
     position: relative;
 
-    color: #292929;
+    color: #202020;
 
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
 
     text-decoration: none;
@@ -108,34 +106,9 @@ a {
 }
 
 
-.navigation a::after {
-    content: "";
-
-    position: absolute;
-
-    left: 50%;
-    bottom: -5px;
-
-    transform: translateX(-50%);
-
-    width: 0;
-    height: 1px;
-
-    background: #b51f24;
-
-    transition: width 0.25s ease;
-}
-
-
 .navigation a:hover {
     color: #b51f24;
 }
-
-
-.navigation a:hover::after {
-    width: 100%;
-}
-
 
 
 /* =========================================================
@@ -147,84 +120,232 @@ a {
 
     margin: 18px;
 
-    padding: 150px 8% 90px;
+    padding: 145px 8% 90px;
 
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
     background:
         radial-gradient(
-            circle at 75% 25%,
-            rgba(181, 31, 36, 0.08),
+            circle at 75% 30%,
+            rgba(181, 31, 36, 0.06),
             transparent 30%
         ),
-        #eeeDE8;
+        #f1efeb;
 
-    border-radius: 38px;
+    border-radius: 42px;
 
     overflow: hidden;
 }
 
 
-
-/* ---------- HERO CONTENT ---------- */
+/* ---------- CENTER CONTENT ---------- */
 
 .hero-content {
     width: 100%;
-    max-width: 850px;
 
     display: flex;
     flex-direction: column;
+
+    justify-content: center;
     align-items: center;
 
     text-align: center;
 }
 
 
-
-/* ---------- HERO LOGO ---------- */
+/* ---------- BIG LOGO ---------- */
 
 .hero-logo {
-    width: 200px;
-    height: 200px;
+    width: 260px;
+    height: 260px;
 
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 
     object-fit: contain;
 }
 
 
-
-/* ---------- COMPANY ---------- */
+/* ---------- IRGIBAEV ---------- */
 
 .hero-company {
     color: #181818;
 
-    font-size: clamp(44px, 6vw, 80px);
-
+    font-size: clamp(44px, 5vw, 72px);
     font-weight: 600;
 
     line-height: 1;
 
-    letter-spacing: 7px;
+    letter-spacing: 8px;
 }
 
 
+/* ---------- GRAPHICS INSTALLATION ---------- */
 
 .hero-company-subtitle {
-    margin-top: 14px;
+    margin-top: 13px;
 
-    color: #74706a;
+    color: #6f6b66;
 
     font-size: 11px;
-
     font-weight: 600;
 
-    letter-spacing: 5px;
+    letter-spacing: 6px;
 }
 
 
+/* ---------- CONTACT BUTTON ---------- */
+
+.hero-contact-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 38px;
+
+    min-width: 175px;
+    min-height: 54px;
+
+    padding: 14px 34px;
+
+    background: #b51f24;
+    color: #ffffff;
+
+    border-radius: 100px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 10px 25px rgba(181, 31, 36, 0.16);
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.hero-contact-button:hover {
+    background: #96191e;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 30px rgba(181, 31, 36, 0.24);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .header {
+        top: 20px;
+
+        width: calc(100% - 42px);
+    }
+
+
+    .navigation {
+        padding: 13px 18px;
+
+        gap: 16px;
+    }
+
+
+    .navigation a {
+        font-size: 11px;
+    }
+
+
+    .hero {
+        min-height: 90vh;
+
+        margin: 10px;
+
+        padding:
+            120px
+            20px
+            65px;
+
+        border-radius: 28px;
+    }
+
+
+    .hero-logo {
+        width: 180px;
+        height: 180px;
+
+        margin-bottom: 18px;
+    }
+
+
+    .hero-company {
+        font-size: 38px;
+
+        letter-spacing: 5px;
+    }
+
+
+    .hero-company-subtitle {
+        margin-top: 10px;
+
+        font-size: 8px;
+
+        letter-spacing: 3.5px;
+    }
+
+
+    .hero-contact-button {
+        margin-top: 30px;
+
+        min-width: 160px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .navigation {
+        padding: 12px 14px;
+
+        gap: 10px;
+    }
+
+
+    .navigation a {
+        font-size: 10px;
+    }
+
+
+    .hero-logo {
+        width: 155px;
+        height: 155px;
+    }
+
+
+    .hero-company {
+        font-size: 31px;
+
+        letter-spacing: 4px;
+    }
+
+
+    .hero-company-subtitle {
+        font-size: 7px;
+
+        letter-spacing: 2.7px;
+    }
+
+}
 
 /* ---------- DESCRIPTION ---------- */
 
