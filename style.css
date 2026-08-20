@@ -8,34 +8,26 @@
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
 
-
 body {
     font-family: Arial, Helvetica, sans-serif;
-
-    background: #151718;
+    background: #111213;
     color: #f4f2ed;
-
     line-height: 1.6;
-
     overflow-x: hidden;
 }
-
 
 img {
     display: block;
     max-width: 100%;
 }
 
-
 a {
     color: inherit;
 }
-
 
 
 /* =========================================================
@@ -47,27 +39,24 @@ a {
 
     width: calc(100% - 60px);
     max-width: 1500px;
-
     min-height: calc(100vh - 60px);
 
     margin: 30px auto;
-
     padding: 150px 60px 90px;
 
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
     overflow: hidden;
 
     border-radius: 55px;
-
-    border: 1px solid rgba(255,255,255,.1);
+    border: 1px solid rgba(255, 255, 255, 0.10);
 
     background:
         linear-gradient(
-            rgba(0,0,0,.22),
-            rgba(0,0,0,.35)
+            rgba(0, 0, 0, 0.20),
+            rgba(0, 0, 0, 0.38)
         ),
         url("hero-bg.jpg");
 
@@ -75,10 +64,8 @@ a {
     background-position: center;
 
     box-shadow:
-        0 30px 80px
-        rgba(0,0,0,.35);
+        0 30px 80px rgba(0, 0, 0, 0.35);
 }
-
 
 
 /* =========================================================
@@ -99,7 +86,6 @@ a {
 }
 
 
-
 /* =========================================================
    NAVIGATION
 ========================================================= */
@@ -108,48 +94,45 @@ a {
     width: 100%;
 
     display: grid;
-
-    grid-template-columns:
-        repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
 
     overflow: hidden;
 
     border-radius: 100px;
 
-    background: rgba(248,247,243,.96);
+    background: rgba(248, 247, 243, 0.96);
 
     box-shadow:
-        0 10px 35px
-        rgba(0,0,0,.18);
+        0 10px 35px rgba(0, 0, 0, 0.18);
 }
 
-
 .navigation a {
+    min-width: 0;
     height: 58px;
 
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
+    padding: 0 10px;
 
     color: #161616;
 
     text-decoration: none;
+    text-align: center;
 
     font-size: 14px;
+    font-weight: 400;
 
     transition:
-        color .25s ease,
-        background .25s ease;
+        color 0.25s ease,
+        background 0.25s ease;
 }
-
 
 .navigation a:hover {
     color: #b9161c;
-
-    background:
-        rgba(185,22,28,.04);
+    background: rgba(185, 22, 28, 0.04);
 }
-
 
 
 /* =========================================================
@@ -158,17 +141,14 @@ a {
 
 .hero-content {
     position: relative;
-
     z-index: 5;
 
     display: flex;
     flex-direction: column;
-
     align-items: center;
 
     text-align: center;
 }
-
 
 .hero-logo {
     width: 190px;
@@ -178,18 +158,13 @@ a {
 
     margin-bottom: 30px;
 
-    filter:
-        brightness(0)
-        invert(1);
+    filter: brightness(0) invert(1);
 }
-
 
 .hero h1 {
     color: #f5f3ee;
 
-    font-size:
-        clamp(42px, 5vw, 72px);
-
+    font-size: clamp(42px, 5vw, 72px);
     font-weight: 500;
 
     line-height: 1;
@@ -199,27 +174,22 @@ a {
     margin-left: 13px;
 }
 
-
 .hero-subtitle {
     margin-top: 20px;
+    margin-left: 8px;
 
-    color:
-        rgba(255,255,255,.68);
+    color: rgba(255, 255, 255, 0.68);
 
     font-size: 13px;
 
     letter-spacing: 8px;
-
-    margin-left: 8px;
 }
 
-
 .hero-button {
-    margin-top: 45px;
-
     min-width: 225px;
     min-height: 60px;
 
+    margin-top: 45px;
     padding: 15px 35px;
 
     display: inline-flex;
@@ -236,18 +206,28 @@ a {
 
     font-size: 16px;
 
-    transition:
-        transform .25s ease,
-        background .25s ease;
-}
+    box-shadow:
+        0 12px 30px rgba(185, 22, 28, 0.22);
 
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
 
 .hero-button:hover {
     transform: translateY(-3px);
 
     background: #d51d24;
+
+    box-shadow:
+        0 16px 35px rgba(185, 22, 28, 0.30);
 }
 
+
+/* =========================================================
+   HERO LOCATION
+========================================================= */
 
 .hero-location {
     position: absolute;
@@ -263,29 +243,25 @@ a {
 
     text-align: center;
 
-    color:
-        rgba(255,255,255,.48);
+    color: rgba(255, 255, 255, 0.48);
 
     font-size: 10px;
 
     letter-spacing: 4px;
 }
 
-
 .hero-location span {
     margin: 0 12px;
 }
 
 
-
 /* =========================================================
-   SECTIONS
+   GENERAL SECTIONS
 ========================================================= */
 
 .section {
     padding: 120px 7%;
 }
-
 
 .section-heading {
     max-width: 850px;
@@ -295,31 +271,27 @@ a {
     text-align: center;
 }
 
-
 .section-label {
     margin-bottom: 17px;
 
     color: #c41b21;
 
     font-size: 11px;
-
     font-weight: 600;
 
     letter-spacing: 3px;
-}
 
+    text-transform: uppercase;
+}
 
 .section-heading h2 {
     color: #f3f1ec;
 
-    font-size:
-        clamp(42px, 5vw, 67px);
-
+    font-size: clamp(42px, 5vw, 67px);
     font-weight: 400;
 
     line-height: 1.05;
 }
-
 
 .section-description {
     max-width: 700px;
@@ -329,10 +301,8 @@ a {
     color: #8a8a8a;
 
     font-size: 16px;
-
     line-height: 1.8;
 }
-
 
 
 /* =========================================================
@@ -343,20 +313,16 @@ a {
     background: #111213;
 }
 
-
 .about-grid {
     max-width: 1200px;
 
-    margin: auto;
+    margin: 0 auto;
 
     display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
     gap: 22px;
 }
-
 
 .about-card {
     min-height: 300px;
@@ -364,19 +330,25 @@ a {
     padding: 35px;
 
     display: flex;
-
     flex-direction: column;
-
     justify-content: flex-end;
 
     border-radius: 28px;
 
     background: #1a1b1c;
 
-    border:
-        1px solid #292a2b;
+    border: 1px solid #292a2b;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
 }
 
+.about-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(196, 27, 33, 0.35);
+}
 
 .about-card > span {
     margin-bottom: auto;
@@ -384,24 +356,24 @@ a {
     color: #c41b21;
 
     font-size: 11px;
-}
 
+    letter-spacing: 2px;
+}
 
 .about-card h3 {
     margin-bottom: 12px;
 
-    font-size: 22px;
+    color: #f3f1ec;
 
+    font-size: 22px;
     font-weight: 500;
 }
-
 
 .about-card p {
     color: #858585;
 
     font-size: 14px;
 }
-
 
 
 /* =========================================================
@@ -412,44 +384,41 @@ a {
     background: #0d0e0f;
 }
 
-
 .services-grid {
     max-width: 1200px;
 
-    margin: auto;
+    margin: 0 auto;
 
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    border-top:
-        1px solid #292a2b;
-
-    border-left:
-        1px solid #292a2b;
+    border-top: 1px solid #292a2b;
+    border-left: 1px solid #292a2b;
 }
-
 
 .service {
     min-height: 230px;
 
     padding: 32px;
 
-    border-right:
-        1px solid #292a2b;
+    border-right: 1px solid #292a2b;
+    border-bottom: 1px solid #292a2b;
 
-    border-bottom:
-        1px solid #292a2b;
+    transition:
+        background 0.3s ease;
 }
 
+.service:hover {
+    background: #151617;
+}
 
 .service span {
     color: #c41b21;
 
     font-size: 11px;
-}
 
+    letter-spacing: 2px;
+}
 
 .service h3 {
     margin-top: 50px;
@@ -457,10 +426,8 @@ a {
     color: #ffffff;
 
     font-size: 22px;
-
     font-weight: 500;
 }
-
 
 .service p {
     margin-top: 12px;
@@ -469,7 +436,6 @@ a {
 
     font-size: 14px;
 }
-
 
 
 /* =========================================================
@@ -483,8 +449,7 @@ a {
 }
 
 
-
-/* SLIDER CONTAINER */
+/* ---------- SLIDER ---------- */
 
 .portfolio-slider {
     position: relative;
@@ -492,17 +457,16 @@ a {
     width: 100%;
     max-width: 1400px;
 
-    margin: auto;
+    margin: 0 auto;
 
     display: flex;
     align-items: center;
 
-    gap: 20px;
+    gap: 22px;
 }
 
 
-
-/* WINDOW */
+/* ---------- VIEWPORT ---------- */
 
 .portfolio-viewport {
     width: 100%;
@@ -511,8 +475,7 @@ a {
 }
 
 
-
-/* MOVING TRACK */
+/* ---------- MOVING TRACK ---------- */
 
 .portfolio-track {
     display: flex;
@@ -520,54 +483,49 @@ a {
     gap: 18px;
 
     transition:
-        transform .65s
-        cubic-bezier(.22,.61,.36,1);
+        transform 0.7s
+        cubic-bezier(0.22, 0.61, 0.36, 1);
 
     will-change: transform;
 }
 
 
-
-/* PHOTO */
+/* ---------- PHOTO CARDS ---------- */
 
 .portfolio-slide {
-    flex:
-        0 0
-        calc((100% - 36px) / 3);
+    flex: 0 0 calc((100% - 36px) / 3);
 
-    height: 360px;
+    height: 350px;
 
     overflow: hidden;
 
-    border-radius: 26px;
+    border-radius: 24px;
 
     background: #18191a;
 
     border:
-        1px solid
-        rgba(255,255,255,.07);
+        1px solid rgba(255, 255, 255, 0.08);
 
     transition:
-        transform .3s ease,
-        border-color .3s ease;
+        transform 0.3s ease,
+        border-color 0.3s ease;
 }
-
 
 .portfolio-slide:hover {
     transform: translateY(-5px);
 
     border-color:
-        rgba(196,27,33,.45);
+        rgba(185, 22, 28, 0.55);
 }
-
 
 .portfolio-slide img {
     width: 100%;
     height: 100%;
 
+    display: block;
+
     object-fit: cover;
 }
-
 
 
 /* =========================================================
@@ -577,79 +535,76 @@ a {
 .portfolio-arrow {
     flex-shrink: 0;
 
-    width: 54px;
-    height: 54px;
+    width: 56px;
+    height: 56px;
 
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
     border-radius: 50%;
 
     border:
-        1px solid
-        rgba(255,255,255,.18);
+        1px solid rgba(255, 255, 255, 0.18);
 
-    background:
-        rgba(18,19,20,.95);
+    background: #191a1b;
 
     color: #f4f2ed;
 
-    font-size: 20px;
+    font-size: 22px;
 
     cursor: pointer;
 
     transition:
-        transform .25s ease,
-        background .25s ease,
-        border-color .25s ease;
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        color 0.25s ease;
 }
-
 
 .portfolio-arrow:hover {
     background: #b9161c;
 
     border-color: #b9161c;
 
+    color: #ffffff;
+
     transform: scale(1.08);
 }
 
 
-
 /* =========================================================
-   PORTFOLIO NUMBER
+   PORTFOLIO COUNTER
 ========================================================= */
 
 .portfolio-progress {
-    margin-top: 28px;
+    margin-top: 30px;
 
     display: flex;
-
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
     gap: 14px;
 
-    color: #666;
+    color: #666666;
 
     font-size: 10px;
 
     letter-spacing: 2px;
 }
 
-
 #portfolioCurrent {
     color: #c41b21;
 }
 
+.portfolio-progress-line {
+    display: block;
 
-.progress-line {
     width: 55px;
     height: 1px;
 
-    background: #3a3a3a;
+    background: #3b3b3b;
 }
-
 
 
 /* =========================================================
@@ -660,20 +615,16 @@ a {
     background: #0d0e0f;
 }
 
-
 .certification-grid {
     max-width: 900px;
 
-    margin: auto;
+    margin: 0 auto;
 
     display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
     gap: 22px;
 }
-
 
 .certification-card {
     min-height: 280px;
@@ -681,19 +632,25 @@ a {
     padding: 38px;
 
     display: flex;
-
     flex-direction: column;
-
     justify-content: space-between;
 
     border-radius: 28px;
 
     background: #171819;
 
-    border:
-        1px solid #292a2b;
+    border: 1px solid #292a2b;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
 }
 
+.certification-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(196, 27, 33, 0.35);
+}
 
 .certification-card strong {
     color: #c41b21;
@@ -701,18 +658,18 @@ a {
     font-size: 25px;
 }
 
-
 .certification-card h3 {
-    font-size: 24px;
+    color: #f3f1ec;
 
+    font-size: 24px;
     font-weight: 500;
 }
 
-
 .certification-card p {
+    margin-top: 5px;
+
     color: #808080;
 }
-
 
 
 /* =========================================================
@@ -721,7 +678,6 @@ a {
 
 .contact-section {
     width: calc(100% - 60px);
-
     max-width: 1500px;
 
     margin: 30px auto;
@@ -732,31 +688,27 @@ a {
 
     background: #1a1b1c;
 
-    border:
-        1px solid #292a2b;
+    border: 1px solid #292a2b;
 }
-
 
 .contact-content {
     max-width: 800px;
 
-    margin: auto;
+    margin: 0 auto;
 
     text-align: center;
 }
 
-
 .contact-content h2 {
     margin-bottom: 25px;
 
-    font-size:
-        clamp(45px, 6vw, 75px);
+    color: #f3f1ec;
 
+    font-size: clamp(45px, 6vw, 75px);
     font-weight: 400;
 
     line-height: 1;
 }
-
 
 .contact-content > p:not(.section-label) {
     max-width: 600px;
@@ -766,7 +718,6 @@ a {
     color: #898989;
 }
 
-
 .contact-button {
     min-width: 205px;
     min-height: 56px;
@@ -774,7 +725,6 @@ a {
     padding: 15px 30px;
 
     display: inline-flex;
-
     align-items: center;
     justify-content: center;
 
@@ -782,11 +732,20 @@ a {
 
     background: #b9161c;
 
-    color: white;
+    color: #ffffff;
 
     text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
 }
 
+.contact-button:hover {
+    transform: translateY(-3px);
+
+    background: #d51d24;
+}
 
 
 /* =========================================================
@@ -797,57 +756,49 @@ a {
     padding: 65px 20px 40px;
 
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
 
     text-align: center;
 }
-
 
 .footer img {
     width: 60px;
 
     margin-bottom: 15px;
 
-    filter:
-        brightness(0)
-        invert(1);
+    filter: brightness(0) invert(1);
 }
-
 
 .footer strong {
+    color: #f3f1ec;
+
     letter-spacing: 4px;
 }
-
 
 .footer span {
     margin-top: 5px;
 
-    color: #777;
+    color: #777777;
 
     font-size: 7px;
 
     letter-spacing: 3px;
 }
 
-
 .footer p {
     margin-top: 22px;
 
-    color: #666;
+    color: #666666;
 
     font-size: 11px;
 }
 
-
 .footer small {
     margin-top: 7px;
 
-    color: #444;
+    color: #444444;
 }
-
 
 
 /* =========================================================
@@ -860,29 +811,20 @@ a {
         width: calc(100% - 100px);
     }
 
-
     .about-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
-
 
     .services-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
-
 
     .portfolio-slide {
-        flex:
-            0 0
-            calc((100% - 18px) / 2);
+        flex: 0 0 calc((100% - 18px) / 2);
 
-        height: 340px;
+        height: 330px;
     }
-
 }
-
 
 
 /* =========================================================
@@ -891,42 +833,56 @@ a {
 
 @media (max-width: 700px) {
 
-
     .hero {
         width: calc(100% - 14px);
 
-        min-height:
-            calc(100svh - 14px);
+        min-height: calc(100svh - 14px);
 
         margin: 7px auto;
 
-        padding: 110px 20px 80px;
+        padding: 105px 18px 75px;
 
         border-radius: 28px;
     }
 
 
+    /* MENU STAYS HORIZONTAL */
+
     .header {
         top: 18px;
 
-        width: calc(100% - 28px);
+        width: calc(100% - 24px);
     }
 
+    .navigation {
+        width: 100%;
+
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+
+        border-radius: 100px;
+    }
 
     .navigation a {
+        min-width: 0;
+
         height: 44px;
+
+        padding: 0 2px;
 
         font-size: 9px;
 
-        padding: 0 2px;
+        white-space: nowrap;
     }
 
+
+    /* HERO */
 
     .hero-logo {
         width: 125px;
         height: 125px;
-    }
 
+        margin-bottom: 24px;
+    }
 
     .hero h1 {
         font-size: 30px;
@@ -936,13 +892,13 @@ a {
         margin-left: 6px;
     }
 
-
     .hero-subtitle {
+        margin-top: 14px;
+
         font-size: 7px;
 
         letter-spacing: 3px;
     }
-
 
     .hero-button {
         min-width: 180px;
@@ -953,32 +909,41 @@ a {
         font-size: 14px;
     }
 
-
     .hero-location {
         bottom: 22px;
 
         font-size: 6px;
 
-        letter-spacing: 1.4px;
+        letter-spacing: 1.3px;
 
         white-space: nowrap;
     }
-
 
     .hero-location span {
         margin: 0 5px;
     }
 
 
+    /* SECTIONS */
+
     .section {
         padding: 85px 22px;
     }
 
+    .section-heading {
+        margin-bottom: 45px;
+    }
 
     .section-heading h2 {
         font-size: 39px;
     }
 
+    .section-description {
+        font-size: 14px;
+    }
+
+
+    /* ABOUT / SERVICES / CERTIFICATIONS */
 
     .about-grid,
     .services-grid,
@@ -987,27 +952,29 @@ a {
     }
 
 
-
     /* PORTFOLIO */
 
     .portfolio-slider {
         gap: 0;
     }
 
+    .portfolio-viewport {
+        width: 100%;
+
+        overflow: hidden;
+    }
 
     .portfolio-track {
         gap: 14px;
     }
 
-
     .portfolio-slide {
-        flex: 0 0 84%;
+        flex: 0 0 86%;
 
-        height: 330px;
+        height: 310px;
 
-        border-radius: 22px;
+        border-radius: 20px;
     }
-
 
     .portfolio-arrow {
         position: absolute;
@@ -1018,21 +985,23 @@ a {
         height: 46px;
 
         background:
-            rgba(15,16,17,.90);
+            rgba(17, 18, 19, 0.92);
 
-        backdrop-filter: blur(8px);
+        backdrop-filter: blur(10px);
+
+        font-size: 18px;
     }
-
 
     .portfolio-prev {
         left: 8px;
     }
 
-
     .portfolio-next {
         right: 8px;
     }
 
+
+    /* CONTACT */
 
     .contact-section {
         width: calc(100% - 14px);
@@ -1044,13 +1013,10 @@ a {
         border-radius: 28px;
     }
 
-
     .contact-content h2 {
         font-size: 42px;
     }
-
 }
-
 
 
 /* =========================================================
@@ -1060,14 +1026,18 @@ a {
 @media (max-width: 430px) {
 
     .navigation a {
-        font-size: 8px;
+        font-size: 7.5px;
     }
 
+    .hero h1 {
+        font-size: 27px;
+
+        letter-spacing: 5px;
+    }
 
     .portfolio-slide {
-        flex: 0 0 86%;
+        flex: 0 0 88%;
 
-        height: 310px;
+        height: 290px;
     }
-
 }
