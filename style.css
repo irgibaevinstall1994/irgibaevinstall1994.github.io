@@ -82,21 +82,83 @@ a {
 .logo {
     display: flex;
     align-items: center;
+    gap: 14px;
 
     text-decoration: none;
     color: #181818;
 }
 
+/* Сам знак IR */
+
 .logo img {
     display: block;
 
-    width: 185px;
-    height: auto;
+    width: 75px;
+    height: 75px;
 
     object-fit: contain;
 }
 
+/* Текст рядом с логотипом */
 
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    line-height: 1;
+}
+
+/* IRGIBAEV */
+
+.logo-name {
+    color: #181818;
+
+    font-size: 19px;
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+}
+
+/* GRAPHICS INSTALLATION */
+
+.logo-subtitle {
+    margin-top: 7px;
+
+    color: #77736c;
+
+    font-size: 8px;
+    font-weight: 600;
+
+    letter-spacing: 2.2px;
+}
+
+
+/* ---------- LOGO MOBILE ---------- */
+
+@media (max-width: 900px) {
+
+    .logo {
+        gap: 9px;
+    }
+
+    .logo img {
+        width: 52px;
+        height: 52px;
+    }
+
+    .logo-name {
+        font-size: 15px;
+        letter-spacing: 1.7px;
+    }
+
+    .logo-subtitle {
+        margin-top: 5px;
+
+        font-size: 6.5px;
+        letter-spacing: 1.4px;
+    }
+}
 /* ---------- NAVIGATION ---------- */
 
 .navigation {
