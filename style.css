@@ -1521,3 +1521,77 @@ body.modal-open {
         height: 280px;
     }
 }
+
+/* ========================================
+   HERO — ESTIMATE & SERVICE AREA
+======================================== */
+
+.hero-bottom-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Free estimate */
+
+.hero-estimate {
+    margin: 0 0 22px;
+
+    color: #b9161c;
+
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* Location / service area */
+
+.hero-location {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.52);
+
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.6;
+
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+}
+
+.hero-location span {
+    margin: 0 14px;
+    color: rgba(255, 255, 255, 0.32);
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .hero-estimate {
+        max-width: 300px;
+        margin-bottom: 18px;
+
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .hero-location {
+        max-width: 340px;
+
+        font-size: 9px;
+        line-height: 1.9;
+
+        letter-spacing: 1.8px;
+    }
+
+    .hero-location span {
+        margin: 0 6px;
+    }
+}
