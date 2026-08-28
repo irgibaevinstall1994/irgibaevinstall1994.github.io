@@ -1526,18 +1526,13 @@ body.modal-open {
    HERO — ESTIMATE & SERVICE AREA
 ======================================== */
 
-.hero-bottom-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
 
-
-/* Free estimate */
+/* FREE ESTIMATE — directly under Contact Us */
 
 .hero-estimate {
-    margin: 0 0 22px;
+    max-width: 430px;
+
+    margin: 16px auto 0;
 
     color: #b9161c;
 
@@ -1545,15 +1540,15 @@ body.modal-open {
     font-weight: 500;
     line-height: 1.5;
 
-    letter-spacing: 0.3px;
+    letter-spacing: 0.2px;
+
+    text-align: center;
 }
 
 
-/* Location / service area */
+/* LOCATION / SERVICE AREA */
 
 .hero-location {
-    margin: 0;
-
     color: rgba(255, 255, 255, 0.52);
 
     font-size: 10px;
@@ -1566,17 +1561,19 @@ body.modal-open {
 
 .hero-location span {
     margin: 0 14px;
+
     color: rgba(255, 255, 255, 0.32);
 }
 
 
-/* Mobile */
+/* MOBILE */
 
 @media (max-width: 700px) {
 
     .hero-estimate {
-        max-width: 300px;
-        margin-bottom: 18px;
+        max-width: 290px;
+
+        margin-top: 14px;
 
         font-size: 12px;
         line-height: 1.5;
